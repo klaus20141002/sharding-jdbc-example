@@ -47,6 +47,12 @@ public class DemoService {
         orderItemRepository.createIfNotExistsTable();
     }
     
+    public void alterTableOrder() {
+    	System.out.println("alter ordering ......................");
+        orderRepository.alterTableOrder();
+        System.out.println("alter ordering finish");
+    }
+    
     
     public void demo() {
         orderRepository.createIfNotExistsTable();

@@ -12,6 +12,10 @@
     <update id="dropTable">
         DROP TABLE IF EXISTS t_order;
     </update>
+    <update id="alterTableOrder">
+        ALTER TABLE t_order
+	ADD COLUMN order_no VARCHAR(50) NULL DEFAULT NULL COMMENT 'order_no' AFTER status;
+    </update>
     
     <insert id="insert" useGeneratedKeys="true" keyProperty="orderId">
         INSERT INTO t_order (

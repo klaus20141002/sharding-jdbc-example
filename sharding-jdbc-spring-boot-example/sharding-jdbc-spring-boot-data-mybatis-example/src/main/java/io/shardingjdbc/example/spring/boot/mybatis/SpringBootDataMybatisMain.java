@@ -29,6 +29,15 @@ public class SpringBootDataMybatisMain {
     public static void main(final String[] args) {
     // CHECKSTYLE:ON
         ApplicationContext applicationContext = SpringApplication.run(SpringBootDataMybatisMain.class, args);
-        applicationContext.getBean(DemoService.class).demo();
+        System.out.println("init..............");
+        applicationContext.getBean(DemoService.class).init();
+        
+//        System.out.println("alter..............");
+//        applicationContext.getBean(DemoService.class).alterTableOrder();
+        
+//        System.out.println("demo..............");
+//        applicationContext.getBean(DemoService.class).demo();
+        
+        
     }
 }

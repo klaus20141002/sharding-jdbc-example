@@ -32,4 +32,6 @@ public interface OrderRepository {
     void delete(Long orderId);
     
     void dropTable();
+    
+    void alterTableOrder();
 }
