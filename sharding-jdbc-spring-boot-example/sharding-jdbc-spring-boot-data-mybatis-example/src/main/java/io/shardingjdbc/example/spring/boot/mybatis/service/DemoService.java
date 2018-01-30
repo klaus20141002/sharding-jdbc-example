@@ -36,6 +36,18 @@ public class DemoService {
     @Resource
     private OrderItemRepository orderItemRepository;
     
+    /**
+     * 初始化数据库
+     */
+    public void init() {
+    	orderItemRepository.dropTable();
+        orderRepository.dropTable();
+        
+        orderRepository.createIfNotExistsTable();
+        orderItemRepository.createIfNotExistsTable();
+    }
+    
+    
     public void demo() {
         orderRepository.createIfNotExistsTable();
         orderItemRepository.createIfNotExistsTable();
